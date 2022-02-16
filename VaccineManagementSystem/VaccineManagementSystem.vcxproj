@@ -56,6 +56,7 @@
       <PreprocessorDefinitions>STATIC_CONCPP;</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLAPI\include;$(SolutionDir)vendor\GLFW\include\;$(SolutionDir)vendor\IMGUI\</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,6 +74,7 @@
       <PreprocessorDefinitions>STATIC_CONCPP;</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLAPI\include;$(SolutionDir)vendor\GLFW\include\;$(SolutionDir)vendor\IMGUI\</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -91,6 +93,8 @@
     <ClCompile Include="..\vendor\IMGUI\imgui_impl_opengl3.cpp" />
     <ClCompile Include="..\vendor\IMGUI\imgui_tables.cpp" />
     <ClCompile Include="..\vendor\IMGUI\imgui_widgets.cpp" />
+    <ClCompile Include="src\imGuiWindow.cpp" />
+    <ClCompile Include="src\sqlConnection.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +109,8 @@
     <ClInclude Include="..\vendor\IMGUI\imstb_rectpack.h" />
     <ClInclude Include="..\vendor\IMGUI\imstb_textedit.h" />
     <ClInclude Include="..\vendor\IMGUI\imstb_truetype.h" />
+    <ClInclude Include="src\imGuiWindow.h" />
+    <ClInclude Include="src\sqlConnection.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -45,6 +45,12 @@
     <ClCompile Include="..\vendor\IMGUI\imgui_widgets.cpp">
       <Filter>IMGUI</Filter>
     </ClCompile>
+    <ClCompile Include="src\sqlConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imGuiWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\vendor\IMGUI\imconfig.h">
@@ -79,6 +85,12 @@
     </ClInclude>
     <ClInclude Include="..\vendor\GLFW\include\GLFW\glfw3native.h">
       <Filter>GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sqlConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imGuiWindow.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

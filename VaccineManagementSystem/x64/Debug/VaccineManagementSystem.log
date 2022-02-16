@@ -1,6 +1,190 @@
-﻿  main.cpp
+﻿  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imGuiWindow.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+C:\Users\Ravi\Desktop\Cdev\VaccineManagementSystem\vendor\GLFW\include\GLFW\glfw3.h(123): message : see previous definition of 'APIENTRY'
+  sqlConnection.cpp
+  main.cpp
+  Generating Code...
+mysqlclient.lib(client.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(client.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(libmysql.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(libmysql.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(mysql_trace.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(mysql_trace.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-latin1.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-latin1.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(client_authentication.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(client_authentication.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(strmake.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(strmake.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(strxmov.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(strxmov.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(strxnmov.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(strxnmov.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(int2str.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(int2str.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_compress.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_compress.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(mulalloc.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(mulalloc.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_symlink.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_symlink.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_error.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_error.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(mf_dirname.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(mf_dirname.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(mf_pack.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(mf_pack.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_alloc.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_alloc.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(charset.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(charset.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(list.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(list.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(net_serv.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(net_serv.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(password.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(password.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(pack.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(pack.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(client_plugin.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(client_plugin.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(compression.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(compression.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_malloc.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_malloc.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_default.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_default.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(typelib.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(typelib.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(vio.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(vio.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(viosocket.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(viosocket.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(viosslfactories.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(viosslfactories.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(viossl.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(viossl.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(bind_params.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(bind_params.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_thr_init.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_thr_init.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_init.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_init.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(errmsg.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(errmsg.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(psi_noop.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(psi_noop.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(dtoa.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(dtoa.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_strtoll10.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_strtoll10.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_open.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_open.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_read.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_read.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(mf_format.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(mf_format.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_time.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_time.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(errors.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(errors.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-utf8.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-utf8.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-bin.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-bin.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-simple.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-simple.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(crypt_genhash_impl.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(crypt_genhash_impl.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(sha2_password_common.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(sha2_password_common.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_static.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_static.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(mf_loadpath.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(mf_loadpath.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_lib.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_lib.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_mess.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_mess.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_getwd.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_getwd.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_once.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_once.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(charset-def.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(charset-def.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(sql_chars.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(sql_chars.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-uca.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-uca.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-cp932.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-cp932.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_strchr.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_strchr.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_aes_openssl.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_aes_openssl.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_fstream.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_fstream.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_fopen.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_fopen.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(mf_fn_ext.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(mf_fn_ext.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(viopipe.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(viopipe.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(vioshm.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(vioshm.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(str2int.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(str2int.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_winfile.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_winfile.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_file.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_file.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_thread.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_thread.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-mb.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-mb.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(xml.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(xml.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-extra.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-extra.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-big5.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-big5.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-win1250ch.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-win1250ch.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-czech.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-czech.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-eucjpms.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-eucjpms.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-euc_kr.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-euc_kr.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-gb2312.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-gb2312.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-gbk.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-gbk.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-gb18030.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-gb18030.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-sjis.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-sjis.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-tis620.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-tis620.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-ujis.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-ujis.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(ctype-ucs2.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(ctype-ucs2.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_aes.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_aes.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_access.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_access.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+mysqlclient.lib(my_winerr.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in imGuiWindow.obj
+mysqlclient.lib(my_winerr.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in imGuiWindow.obj
+     Creating library C:\Users\Ravi\Desktop\Cdev\VaccineManagementSystem\x64\Debug\VaccineManagementSystem.lib and object C:\Users\Ravi\Desktop\Cdev\VaccineManagementSystem\x64\Debug\VaccineManagementSystem.exp
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-main.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) void __cdecl check(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (__imp_?check@@YAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "void __cdecl check_lib(void)" (?check_lib@@YAXXZ)
-main.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) void __cdecl check(class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > > const &)" (__imp_?check@@YAXAEBV?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@@std@@@Z) referenced in function "void __cdecl check_lib(void)" (?check_lib@@YAXXZ)
-main.obj : error LNK2019: unresolved external symbol __imp__get_driver_instance_by_name referenced in function get_driver_instance_by_name
-C:\Users\Ravi\Desktop\Cdev\VaccineManagementSystem\x64\Debug\VaccineManagementSystem.exe : fatal error LNK1120: 3 unresolved externals
+C:\Users\Ravi\Desktop\Cdev\VaccineManagementSystem\x64\Debug\VaccineManagementSystem.exe : fatal error LNK1319: 174 mismatches detected
