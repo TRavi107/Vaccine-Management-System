@@ -1,6 +1,4 @@
-#include "imGuiWindow.h"
-#include <format>
-#include <string>
+#include "vmspch.h"
 imGuiWindow::imGuiWindow(std::shared_ptr<sqlConnection> sqlConnectionInst)
 :sqlConnectionInstance {sqlConnectionInst}
 {
@@ -8,6 +6,7 @@ imGuiWindow::imGuiWindow(std::shared_ptr<sqlConnection> sqlConnectionInst)
     if (!glfwInit()) {
         //do something
     }
+    std::cout << "hello" << std::endl;
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
@@ -81,11 +80,16 @@ void imGuiWindow::Run()
         case DisplayWindow::browseTableWin:
             BrowseTableWindow();
             MenuBar();
+            
             break;
+
+        case DisplayWindow::Droptable:
+            DropTable();
         default:
+
             break;
         }
-
+        
         // Rendering
         ImGui::Render();
         int display_w, display_h;
@@ -97,15 +101,36 @@ void imGuiWindow::Run()
         glfwSwapBuffers(window);
     }
 }
+void imGuiWindow::DropTable() {
+    std::string query = "drop table ";
+    query = query + activeDBtable;
+    std::cout << query.c_str() << std::endl;
+    //MYSQL_RES* res=sqlConnectionInstance->Perform_Query(sqlConnectionInstance->GetConnectPtr(), "SELECT * WHERE REFERENCED_TABLE_SCHEMA = 'mydatabase' AND REFERENCED_TABLE_NAME = '<course>'");
+    
+    try  {
+        sqlConnectionInstance->Perform_Query(sqlConnectionInstance->GetConnectPtr(), query.c_str());
+    }
+    catch (char* excp) {
+
+    }
+    
+    SwitchState(DisplayWindow::tableWin);
+
+    //mysql_free_result(res);
+
+}
 
 void imGuiWindow::BrowseTableWindow() {
-    ImVec2 outer_size = ImVec2(0.0f, 50 * 8);
+    ImVec2 outer_size = ImVec2(0.0f, 30 * 8);
     ImGui::SetNextWindowSize(tableWinSize, ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowPos(tableWinPos, ImGuiCond_FirstUseEver);
     std::string query3 = "Table ";
     query3 = query3 + activeDBtable;
     if (ImGui::Begin("Database xyz")) {
         //ImGui::SetWindowFontScale(1.5);
+        if (ImGui::Button("back")) {
+            SwitchState(DisplayWindow::tableWin);
+        }
         ImGui::Text(query3.c_str());
         if (ImGui::BeginTable("table_scrollx", 7, flags, outer_size))
         {
@@ -156,6 +181,7 @@ void imGuiWindow::BrowseTableWindow() {
 
             ImGui::EndTable();
         }
+        
         ImGui::End();
     }
 }
@@ -192,7 +218,7 @@ void imGuiWindow::TableWindow() {
     ImVec2 outer_size = ImVec2(0.0f, 50 * 8);
     ImGui::SetNextWindowSize(tableWinSize, ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowPos(tableWinPos, ImGuiCond_FirstUseEver);
-    if (ImGui::Begin("Database xyz")) {
+    if (ImGui::Begin("Database xyz"),nullptr, ImGuiCond_FirstUseEver) {
         //ImGui::SetWindowFontScale(1.5);
         if (ImGui::BeginTable("table_scrollx", 7, flags, outer_size))
         {
@@ -208,12 +234,12 @@ void imGuiWindow::TableWindow() {
             MYSQL_RES* res =sqlConnectionInstance->Perform_Query(sqlConnectionInstance->GetConnectPtr(), "show tables");
             int num_fields = mysql_num_fields(res);
             MYSQL_ROW row_data;
-            int row = 0;
+            int row=0;
             while ((row_data = mysql_fetch_row(res)) != NULL)
             {
-                ImGui::TableNextRow();
                 row++;
-                for (int column = 0; column < 5; column++)
+                ImGui::TableNextRow();
+                for (int column = 0; column < 4; column++)
                 {
                     // Both TableNextColumn() and TableSetColumnIndex() return true when a column is visible or performing width measurement.
                     // Because here we know that:
@@ -227,26 +253,31 @@ void imGuiWindow::TableWindow() {
                     ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(7.0f, 0.6f, 0.6f));
                     ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(7.0f, 0.7f, 0.7f));
                     ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(7.0f, 0.8f, 0.8f));
+                    
                     switch (column)
                     {
                     case 0:
-                        
                         if (ImGui::Button(row_data[column])) {
                             SwitchState(DisplayWindow::browseTableWin);
                             SwitchDBtable(row_data[column]);
                         }
                         break;
                     case 1:
+                        ImGui::PushID(row);
                         if (ImGui::Button("Browse")) {
                             SwitchState(DisplayWindow::browseTableWin);
-                            SwitchDBtable(row_data[column]);
+                            SwitchDBtable(row_data[0]);
                         }
+                        ImGui::PopID();
+
                         break;
 
                     case 2:
+                        ImGui::PushID(row);
                         if (ImGui::Button("Search")) {
 
                         }
+                        ImGui::PopID();
                         break;
 
                     case 3:
@@ -257,9 +288,12 @@ void imGuiWindow::TableWindow() {
                         break;
 
                     case 4:
+                        ImGui::PushID(row);
                         if (ImGui::Button("Drop")) {
-
+                            SwitchState(DisplayWindow::Droptable);
+                            SwitchDBtable(row_data[0]);
                         }
+                        ImGui::PopID();
                         break;
                     default:
                         break;
@@ -295,6 +329,12 @@ void imGuiWindow::MenuBar(){
         }
         ImGui::EndMainMenuBar();
     }
+}
+
+void imGuiWindow::DropTableWin()
+{
+    Sleep(1000);
+    DropTable();
 }
 
 void imGuiWindow::glfw_error_callback(int error, const char* description)

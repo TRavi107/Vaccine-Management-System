@@ -1,3 +1,4 @@
+#include "vmspch.h"
 #include "sqlConnection.h"
 
 sqlConnection::sqlConnection()

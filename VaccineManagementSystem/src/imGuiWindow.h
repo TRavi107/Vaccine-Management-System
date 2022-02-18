@@ -3,14 +3,13 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include <GLFW/glfw3.h> // Will drag system OpenGL headers
-#include <stdio.h>
-#include <iostream>
 #include "sqlConnection.h"
 
 enum class DisplayWindow {
 	loginWin,
 	tableWin,
 	browseTableWin,
+	Droptable,
 };
 
 class imGuiWindow
@@ -24,6 +23,8 @@ public:
 	void TableWindow();
 	void BrowseTableWindow();
 	void MenuBar();
+	void DropTableWin();
+	void DropTable();
 	inline void SwitchState(DisplayWindow targetWindow) { activeWin = targetWindow; };
 	inline void SwitchDBtable(std::string targetDBtable) { activeDBtable = targetDBtable; };
 	inline std::shared_ptr<sqlConnection> GetSqlPtr() { return sqlConnectionInstance; };

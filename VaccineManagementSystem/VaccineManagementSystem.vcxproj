@@ -57,6 +57,8 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLAPI\include;$(SolutionDir)vendor\GLFW\include\;$(SolutionDir)vendor\IMGUI\</AdditionalIncludeDirectories>
       <LanguageStandard>Default</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>vmspch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -75,6 +77,8 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)vendor\SQLAPI\include;$(SolutionDir)vendor\GLFW\include\;$(SolutionDir)vendor\IMGUI\</AdditionalIncludeDirectories>
       <LanguageStandard>Default</LanguageStandard>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>vmspch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -93,9 +97,26 @@
     <ClCompile Include="..\vendor\IMGUI\imgui_impl_opengl3.cpp" />
     <ClCompile Include="..\vendor\IMGUI\imgui_tables.cpp" />
     <ClCompile Include="..\vendor\IMGUI\imgui_widgets.cpp" />
-    <ClCompile Include="src\imGuiWindow.cpp" />
-    <ClCompile Include="src\sqlConnection.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\imGuiWindow.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\sqlConnection.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\vmspch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\vendor\GLFW\include\GLFW\glfw3.h" />
@@ -111,6 +132,7 @@
     <ClInclude Include="..\vendor\IMGUI\imstb_truetype.h" />
     <ClInclude Include="src\imGuiWindow.h" />
     <ClInclude Include="src\sqlConnection.h" />
+    <ClInclude Include="src\vmspch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
