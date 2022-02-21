@@ -37,8 +37,11 @@ MYSQL_RES* sqlConnection::Perform_Query(MYSQL* connection, const char* query)
     if (mysql_query(connection, query))
     {
         std::cout << "MySQL query error : %s\n" << mysql_error(connection) << std::endl;
-        exit(1);
+        error = mysql_error(connection);
+        //exit(1);
     }
-
+    else {
+        error = "";
+    }
     return mysql_use_result(connection);
 }

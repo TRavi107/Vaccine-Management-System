@@ -10,6 +10,14 @@ enum class DisplayWindow {
 	tableWin,
 	browseTableWin,
 	Droptable,
+	AddRow,
+	errorWind,
+	droprow,
+};
+
+struct data {
+	char _data[64] = "";
+	char datatype[64] = "";
 };
 
 class imGuiWindow
@@ -25,6 +33,10 @@ public:
 	void MenuBar();
 	void DropTableWin();
 	void DropTable();
+	void DropRow();
+	void AddRow();
+	void ErrorWindow();
+	void DropRowFunc();
 	inline void SwitchState(DisplayWindow targetWindow) { activeWin = targetWindow; };
 	inline void SwitchDBtable(std::string targetDBtable) { activeDBtable = targetDBtable; };
 	inline std::shared_ptr<sqlConnection> GetSqlPtr() { return sqlConnectionInstance; };
@@ -32,7 +44,10 @@ public:
 
 private:
 	DisplayWindow activeWin = DisplayWindow::tableWin;
+	DisplayWindow previousWin = DisplayWindow::tableWin;
+
 	std::string activeDBtable;
+	std::string selected_columnName, selected_columnData;
 	std::shared_ptr<sqlConnection> sqlConnectionInstance;
 	int Win_width = 1280;
 	int Win_height = 720;
