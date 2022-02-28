@@ -13,7 +13,9 @@ enum class DisplayWindow {
 	AddRow,
 	errorWind,
 	droprow,
+	comingSoon,
 };
+
 
 struct data {
 	char _data[64] = "";
@@ -23,7 +25,7 @@ struct data {
 class imGuiWindow
 {
 public:
-	imGuiWindow(std::shared_ptr<sqlConnection> sqlConnectionInstance);
+	imGuiWindow();
 	~imGuiWindow();
 	void Run();
 	static void glfw_error_callback(int error, const char* description);
@@ -37,13 +39,14 @@ public:
 	void AddRow();
 	void ErrorWindow();
 	void DropRowFunc();
+	void ComingSoon();
 	inline void SwitchState(DisplayWindow targetWindow) { activeWin = targetWindow; };
 	inline void SwitchDBtable(std::string targetDBtable) { activeDBtable = targetDBtable; };
 	inline std::shared_ptr<sqlConnection> GetSqlPtr() { return sqlConnectionInstance; };
 
 
 private:
-	DisplayWindow activeWin = DisplayWindow::tableWin;
+	DisplayWindow activeWin = DisplayWindow::loginWin;
 	DisplayWindow previousWin = DisplayWindow::tableWin;
 
 	std::string activeDBtable;
@@ -55,7 +58,7 @@ private:
 	ImVec2 loginWinPos = ImVec2(Win_width / 2 - loginWinSize.x / 2, Win_height / 2 - loginWinSize.y / 2 - 100);
 	ImVec2 tableWinSize = ImVec2(400, 400);
 	ImVec2 tableWinPos = ImVec2(Win_width / 2 - tableWinSize.x / 2, Win_height / 2 - tableWinSize.y / 2 - 100);
-	bool show_demo_window = true;
+	bool show_demo_window = false;
 	bool show_another_window = false;
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 	GLFWwindow* window;

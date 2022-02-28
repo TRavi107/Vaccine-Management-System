@@ -1,13 +1,13 @@
 #include "vmspch.h"
 #include "sqlConnection.h"
 
-sqlConnection::sqlConnection()
-
+sqlConnection::sqlConnection(std::string server, std::string username, std::string pass, std::string dbName) :
+    mainServer(server), mainDbUser(username), mainDbPass(pass), mainDbName(dbName)
 {
     connect = mysql_init(NULL);
     if (!connect)
         std::cout << "Couldn't initiate connector\n";
-    if (mysql_real_connect(connect, mainServer.c_str(), mainDbUser.c_str(), mainDbPass.c_str(), mainDbName, 0, NULL, 0))
+    if (mysql_real_connect(connect, mainServer.c_str(), mainDbUser.c_str(), mainDbPass.c_str(), mainDbName.c_str(), 0, NULL, 0))
     {
         //std::cout << "Connection done\n";
         //MYSQL_RES* res = Perform_Query(connect, "select * from enroll");
@@ -22,7 +22,9 @@ sqlConnection::sqlConnection()
     else
     {
         std::cout << mysql_error(connect) << std::endl;
+        exit(1);
     }
+    std::cout << mainServer << std::endl;
 }
 
 

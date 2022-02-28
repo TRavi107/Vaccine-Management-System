@@ -1,6 +1,7 @@
 #include "vmspch.h"
-imGuiWindow::imGuiWindow(std::shared_ptr<sqlConnection> sqlConnectionInst)
-:sqlConnectionInstance {sqlConnectionInst}
+#include "imGuiWindow.h"
+
+imGuiWindow::imGuiWindow()
 {
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit()) {
@@ -100,6 +101,10 @@ void imGuiWindow::Run()
             DropRowFunc();
             break;
 
+        case DisplayWindow::comingSoon:
+            ComingSoon();
+            break;
+
         default:
 
             break;
@@ -187,7 +192,7 @@ void imGuiWindow::AddRow() {
         MYSQL_ROW row_data;
         int num_fields = mysql_num_fields(res);
 
-        static auto datas = std::unique_ptr<data[]>(new data[num_fields]);
+        static auto datas = std::unique_ptr<data[]>(new data[20]);
         int i = 0;
         while ((row_data = mysql_fetch_row(res)) != NULL)
         {
@@ -255,18 +260,19 @@ void imGuiWindow::BrowseTableWindow() {
         }
 
         ImGui::Text(query3.c_str());
-        if (ImGui::BeginTable("table_scrollx", 8, flags, outer_size))
+        if (ImGui::BeginTable("table_scrollx", 15, flags, outer_size))
         {
             std::string query2 =  "SHOW COLUMNS FROM ";
             query2 = query2 + activeDBtable;
             MYSQL_RES* res2 = sqlConnectionInstance->Perform_Query(sqlConnectionInstance->GetConnectPtr(), query2.c_str());
             MYSQL_ROW row_data2;
             ImGui::TableSetupScrollFreeze(0, 1);
-            std::string columnNames[20];
+            std::vector<std::string> columnNames;
+            columnNames.reserve(10);
             int i = 0;
             while ((row_data2 = mysql_fetch_row(res2)) != NULL)
             {
-                columnNames[i] = row_data2[0];
+                columnNames.emplace_back(row_data2[0]);
                 ImGui::TableSetupColumn(row_data2[0], ImGuiTableColumnFlags_NoHide);
                 i++;
             }
@@ -335,24 +341,28 @@ void imGuiWindow::LoginMenu() {
     ImGui::SetNextWindowPos(loginWinPos, ImGuiCond_FirstUseEver);
     if (ImGui::Begin("Login Window"))
     {
-        static char userName[64] = "";
-        ImGui::InputText("Username", userName, 64);
-        static char password[64] = "";
-        ImGui::InputText("password", password, IM_ARRAYSIZE(password), ImGuiInputTextFlags_Password);
-        if (ImGui::Button("Login")) {
-            std::cout << userName << std::endl;
-        }
-        ImGui::SameLine();
-        if (ImGui::Button("Login")) {
-            std::cout << userName << std::endl;
-        }
-        ImGui::SameLine();
-        if (ImGui::Button("Login")) {
-            std::cout << userName << std::endl;
-        }
-        ImGui::SameLine();
-        if (ImGui::Button("Login")) {
-            std::cout << userName << std::endl;
+        ImGui::PushStyleColor(ImGuiCol_Text, (ImVec4)ImColor::HSV(7.0f, 0.6f, 0.6f));
+        ImGui::Text("Welcome to Vaccine Management System");
+        ImGui::Text(" ");
+        ImGui::Text("Resize the window if its too small");
+        ImGui::Text(" ");
+        ImGui::Text("Wrong database name will crash the app.");
+        ImGui::Text(" ");
+        ImGui::Text("To use this app Do the followings");
+        ImGui::Text(" ");
+
+        //ImGui::Text("Run Xamp Control panel and start mysql and apache server.");
+        //ImGui::Text(" ");
+        ImGui::Text("Enter name of existing database and click enter");
+        ImGui::Text(" ");
+        ImGui::PopStyleColor(1);
+        static char databaseName[64] = "";
+        ImGui::InputText(" ",databaseName, 64);
+
+        if (ImGui::Button("Continue")) {
+            sqlConnectionInstance = std::make_shared<sqlConnection>("127.0.0.1","root","",databaseName);
+            //sqlConnectionInstance->SetdataBaseName(databaseName);
+            SwitchState(DisplayWindow::tableWin);
         }
         ImGui::End();
     }
@@ -383,7 +393,7 @@ void imGuiWindow::TableWindow() {
             {
                 row++;
                 ImGui::TableNextRow();
-                for (int column = 0; column < 5; column++)
+                for (int column = 0; column < 4; column++)
                 {
                     // Both TableNextColumn() and TableSetColumnIndex() return true when a column is visible or performing width measurement.
                     // Because here we know that:
@@ -420,6 +430,7 @@ void imGuiWindow::TableWindow() {
                     case 2:
                         ImGui::PushID(row);
                         if (ImGui::Button("Search")) {
+                            SwitchState(DisplayWindow::comingSoon);
 
                         }
                         ImGui::PopID();
@@ -428,7 +439,9 @@ void imGuiWindow::TableWindow() {
                     case 3:
 
                         if (ImGui::Button("Insert")) {
-
+                            //Sleep(1);
+                            SwitchState(DisplayWindow::AddRow);
+                            SwitchDBtable(row_data[0]);
                         }
                         break;
 
@@ -488,7 +501,19 @@ void imGuiWindow::DropRowFunc()
     DropRow();
 }
 
+void imGuiWindow::ComingSoon() {
+    ImGui::SetNextWindowSize(loginWinSize, ImGuiCond_FirstUseEver);
+    ImGui::SetNextWindowPos(loginWinPos, ImGuiCond_FirstUseEver);
+    if (ImGui::Begin("search window") ){
+        if (ImGui::Button("Back")) {
+            SwitchState(DisplayWindow::tableWin);
 
+        }
+        ImGui::Text("This feauture coming soon");
+
+        ImGui::End();
+    }
+}
 
 void imGuiWindow::glfw_error_callback(int error, const char* description)
 {
